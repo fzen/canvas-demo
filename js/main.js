@@ -48,7 +48,7 @@ window.onload = function(){
         ctx.arc(x, y, 10, 0, 2 * Math.PI);
         ctx.fill();
         ctx.moveTo(x,y);
-        ctx.lineWidth = 20
+        ctx.lineWidth = 20        //线宽设为圆半径的2倍，圆为什么会自动变大，半径不再是10了
         ctx.lineTo(lastX,lastY);
         ctx.stroke();
     }
