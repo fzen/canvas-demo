@@ -94,6 +94,7 @@ window.onload = function(){
     // 特性检测，检测是否触控设备
     if ('ontouchstart' in document.body) {
         canvas.ontouchstart = function (e) {
+            e.preventDefault;
             st = true;
             var x = e.touches[0].clientX;
             var y = e.touches[0].clientY;
@@ -106,6 +107,7 @@ window.onload = function(){
             }
         }
         canvas.ontouchmove = function (e) {
+            e.preventDefault;
             if (st&&isEraser){
                 var x = e.touches[0].clientX;
                 var y = e.touches[0].clientY;
@@ -120,7 +122,8 @@ window.onload = function(){
                 lastY = y;
             }
         }
-        canvas.outouchend = function () {
+        canvas.outouchend = function (e) {
+            e.preventDefault;
             st = false;
         }
     }else {
