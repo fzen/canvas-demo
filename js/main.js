@@ -2,9 +2,9 @@
 
 window.onload = function(){
     // 阻止浏览器默认事件
-    document.querySelector('document').addEventListener('touchmove', function (ev) {
-        event.preventDefault();
-    });
+    document.ontouchmove = function (e){
+        e.preventDefault;
+    }
 
     // 设置canvas宽高
     function setCanvasSize() {
