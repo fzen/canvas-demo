@@ -8,7 +8,7 @@ window.onload = function(){
         canvas.width = width;
         canvas.height = height;
     }
-    // 获取canvas
+    // 获取canvas元素
     var canvas = document.getElementById('canvas');
     // 初始化canvas宽高
     setCanvasSize();
@@ -16,7 +16,7 @@ window.onload = function(){
     window.onresize = setCanvasSize;
 
     var st,  /*开启画笔标志位*/
-        lastX,  /*上一个的坐标*/
+        lastX,  /*上一个点的坐标*/
         lastY;
     var isEraser = false; /*默认不开启橡皮擦模式*/
     var width = 12;   /*默认normal线宽10px*/
@@ -166,8 +166,12 @@ window.onload = function(){
         ctx.fill();
         ctx.beginPath();
         ctx.moveTo(x,y);
+<<<<<<< HEAD
         ctx.strokeStyle = color;
         ctx.lineWidth = width;        
+=======
+        ctx.lineWidth = 20;        //线宽设为圆半径的2倍，圆为什么会自动变大，半径不再是10了
+>>>>>>> 03b7bcf5639c3800b4a2779844debbb63e0c8780
         ctx.lineTo(lastX,lastY);
         ctx.stroke();
     }
