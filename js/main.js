@@ -92,7 +92,7 @@ window.onload = function(){
     }
 
     // 特性检测，检测是否触控设备
-    if ('ontouchstart' in document.body) {alert('sdfsfsf')
+    if ('ontouchstart' in document.body) {
         canvas.ontouchstart = function (e) {
             st = true;
             var x = e.touches[0].clientX;
