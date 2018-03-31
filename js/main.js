@@ -5,6 +5,9 @@ window.onload = function(){
     document.querySelector('body').addEventListener('touchstart', function (ev) {
         event.preventDefault();
     });
+    document.querySelector('body').addEventListener('touchmove', function (ev) {
+        event.preventDefault();
+    });
 
     // 设置canvas宽高
     function setCanvasSize() {
