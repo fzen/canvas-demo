@@ -2,7 +2,76 @@
     margin: 0;
     padding: 0;
 }
-
-#canvas {
-    background: red;
+.clearfix::after {
+    content:"";
+    display: block;
+    clear: both;
 }
+ul,li {
+    list-style-type: none;
+}
+body {
+    overflow: hidden;
+}
+#canvas {
+    background-color: white;
+}
+
+#toolBarContainer {
+    position: fixed;
+    top:0;
+    left:0;
+}
+
+
+#toolBar * {
+    float: left;
+    width: 3em;
+}
+#toolBar>li {
+    margin: 15px;
+}
+span.placeHolder {
+    width: 3em;
+    height: 1.5em;
+    text-align: center;
+    background-color: yellowgreen;
+}
+#penSize,#penColor {
+    background-color: gray;
+}
+#penSize li {
+    width:3em;
+    height: 1.5em;
+    text-align:center;
+    background-color:yellow;
+    margin:5px 0; 
+}
+
+#penColor li {
+    width: 3em;
+    height: 1.5em; 
+    text-align:center;
+    background-color:yellow;
+    margin:5px 0; 
+}
+#penColor .black {
+    background-color: black;
+}
+#penColor .red {
+    background-color: red;
+}
+#penColor .yellow {
+    background-color: yellow;
+}
+#penColor .blue {
+    background-color: blue;
+}
+#toolBar .penSizeList,#toolBar .penColorList {
+    display: none;
+}
+#penSize:hover .penSizeList,
+#penColor:hover .penColorList {
+    display: block;
+}
+

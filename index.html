@@ -7,13 +7,76 @@
     <title>drawing</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/main.js"></script>
+    <script src="//at.alicdn.com/t/font_610220_ut75rro85euhm2t9.js"></script>
+    <style type="text/css">
+        .icon {
+           width: 1.5em; height: 1.5em;
+           vertical-align: -0.15em;
+           fill: currentColor;
+           overflow: hidden;
+        }
+    </style>
 </head>
 <body>
     <canvas id="canvas"></canvas>
-    <div id="toolBar">
-        <button>画笔</button>
-        <button>橡皮</button>
-    </div>
-        
+    <div id="toolBarContainer">
+        <ul id="toolBar" class="clearfix">
+            <li id="penSize">
+                <span class="placeHolder normal">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-pen_"></use>
+                    </svg>
+                </span>
+                <ul class="penSizeList">
+                    <li class="thin">       
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-icon-pencil"></use>
+                        </svg>
+                    </li>
+                    <li class="normal">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-pen_"></use>
+                        </svg>
+                    </li>
+                    <li class="big">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-pencil"></use>
+                        </svg>
+                    </li>
+                </ul>
+            </li>
+            <li id="penColor">
+                <span class="placeHolder black"></span>
+                <ul class="penColorList">
+                    <li class="black"></li>
+                    <li class="red"></li>
+                    <li class="yellow"></li>
+                    <li class="blue"></li>
+                </ul>
+            </li>
+            <li id="eraser">
+                <span class="placeHolder">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-ico-erasertool-May"></use>
+                    </svg>
+                </span>
+            </li>
+            <li id="clear">
+                <span class="placeHolder">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-clear"></use>
+                    </svg>
+                </span>
+            </li>
+            <li id="download">
+                <span class="placeHolder">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-LC_icon_download_line_4"></use>
+                    </svg>
+                </span>
+            </li>
+        </ul>
+            
+    </div>        
 </body>
 </html>
