@@ -166,12 +166,8 @@ window.onload = function(){
         ctx.fill();
         ctx.beginPath();
         ctx.moveTo(x,y);
-<<<<<<< HEAD
         ctx.strokeStyle = color;
         ctx.lineWidth = width;        
-=======
-        ctx.lineWidth = 20;        //线宽设为圆半径的2倍，圆为什么会自动变大，半径不再是10了
->>>>>>> 03b7bcf5639c3800b4a2779844debbb63e0c8780
         ctx.lineTo(lastX,lastY);
         ctx.stroke();
     }
