@@ -2,10 +2,7 @@
 
 window.onload = function(){
     // 阻止浏览器默认事件
-    document.querySelector('body').addEventListener('touchstart', function (ev) {
-        event.preventDefault();
-    });
-    document.querySelector('body').addEventListener('touchmove', function (ev) {
+    document.querySelector('document').addEventListener('touchmove', function (ev) {
         event.preventDefault();
     });
 
@@ -102,7 +99,6 @@ window.onload = function(){
     // 特性检测，检测是否触控设备
     if ('ontouchstart' in document.body) {
         canvas.ontouchstart = function (e) {
-            e.preventDefault;
             st = true;
             var x = e.touches[0].clientX;
             var y = e.touches[0].clientY;
@@ -115,7 +111,6 @@ window.onload = function(){
             }
         }
         canvas.ontouchmove = function (e) {
-            e.preventDefault;
             if (st&&isEraser){
                 var x = e.touches[0].clientX;
                 var y = e.touches[0].clientY;
@@ -131,7 +126,6 @@ window.onload = function(){
             }
         }
         canvas.outouchend = function (e) {
-            e.preventDefault;
             st = false;
         }
     }else {
