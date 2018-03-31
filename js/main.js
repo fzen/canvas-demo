@@ -1,6 +1,11 @@
 
 
 window.onload = function(){
+    // 阻止浏览器默认事件
+    document.querySelector('body').addEventListener('touchstart', function (ev) {
+        event.preventDefault();
+    });
+
     // 设置canvas宽高
     function setCanvasSize() {
         var width = document.documentElement.clientWidth;
