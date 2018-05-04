@@ -27,6 +27,7 @@ body {
 #toolBar * {
     float: left;
     width: 3em;
+    background-color: grey;
 }
 #toolBar>li {
     margin: 15px;
