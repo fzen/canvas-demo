@@ -21,13 +21,13 @@ body {
     position: fixed;
     top:0;
     left:0;
+    background-color: grey;
 }
 
 
 #toolBar * {
     float: left;
     width: 3em;
-    background-color: grey;
 }
 #toolBar>li {
     margin: 15px;
