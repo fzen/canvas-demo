@@ -3,7 +3,7 @@
 window.onload = function(){
     // 阻止浏览器默认事件
     document.ontouchmove = function (e){
-        e.preventDefault;
+        e.preventDefault();
     }
 
     // 设置canvas宽高
