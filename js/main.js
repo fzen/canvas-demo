@@ -78,19 +78,23 @@ window.onload = function(){
     black.onclick = function (e) {
         penColor.firstElementChild.className = 'placeHolder black';
         color = 'black';
+        isEraser = false;
     }
     red.onclick = function (e) {
         penColor.firstElementChild.className = 'placeHolder red';
         color = 'red';
+        isEraser = false;        
     }
     yellow.onclick = function (e) {
         penColor.firstElementChild.className = 'placeHolder yellow';
         color = 'yellow';
+        isEraser = false;
     }
 
     blue.onclick = function (e) {
         penColor.firstElementChild.className = 'placeHolder blue';
         color = 'blue';
+        isEraser = false;
     }
     // 监听用户全部清空事件
     var clear = this.document.getElementById('clear').getElementsByClassName('placeHolder')[0];
