@@ -62,7 +62,7 @@ window.onload = function(){
     }
     // 监听用户选择的颜色
     var penColor = document.getElementById('penColor');
-    var black = penColor.getElementsByClassName('black')[0];
+    var black = penColor.getElementsByClassName('black')[1];
     var red = penColor.getElementsByClassName('red')[0];
     var yellow = penColor.getElementsByClassName('yellow')[0];
     var blue = penColor.getElementsByClassName('blue')[0];
