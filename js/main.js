@@ -36,21 +36,26 @@ window.onload = function(){
     var thin = penSize.getElementsByClassName('thin')[0];
     var normal = penSize.getElementsByClassName('normal')[0];
     var big = penSize.getElementsByClassName('big')[0];
+
+    penSize.onclick = function(){
+        if(this.classList.contains('active')){
+            this.classList.remove('active')
+        }else{
+            this.classList.add('active')
+        }
+    }
     
     thin.onclick = function (e){
-        penSize.firstElementChild.className = 'placeHolder thin';
         penSize.firstElementChild.innerHTML = thin.innerHTML;
         width = 6;
         isEraser = false;
     }
     normal.onclick = function (e){
-        penSize.firstElementChild.className = 'placeHolder normal';
         penSize.firstElementChild.innerHTML = normal.innerHTML;
         width = 12;
         isEraser = false;
     }
     big.onclick = function (e){
-        penSize.firstElementChild.className = 'placeHolder big';
         penSize.firstElementChild.innerHTML = big.innerHTML;
         width = 18;
         isEraser = false;
@@ -61,6 +66,15 @@ window.onload = function(){
     var red = penColor.getElementsByClassName('red')[0];
     var yellow = penColor.getElementsByClassName('yellow')[0];
     var blue = penColor.getElementsByClassName('blue')[0];
+
+    penColor.onclick = function(){
+        if(this.classList.contains('active')){
+            this.classList.remove('active')
+        }else{
+            this.classList.add('active')
+        }
+    }
+
     black.onclick = function (e) {
         penColor.firstElementChild.className = 'placeHolder black';
         color = 'black';
@@ -105,7 +119,7 @@ window.onload = function(){
             lastX = x;
             lastY = y;
             if(isEraser){
-                draw(x,y,lastX,lastY,color,width) 
+                draw(x,y,lastX,lastY,'white',width) 
             }else {
                 draw(x,y,lastX,lastY,color,width);
             }
@@ -136,7 +150,7 @@ window.onload = function(){
             lastX = x;
             lastY = y;
             if(isEraser){
-                draw(x,y,lastX,lastY,color,width) 
+                draw(x,y,lastX,lastY,'white',width) 
             }else {
                 draw(x,y,lastX,lastY,color,width);
             }

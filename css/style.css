@@ -70,8 +70,8 @@ span.placeHolder {
 #toolBar .penSizeList,#toolBar .penColorList {
     display: none;
 }
-#penSize:hover .penSizeList,
-#penColor:hover .penColorList {
+#penSize.active .penSizeList,
+#penColor.active .penColorList {
     display: block;
 }
 
